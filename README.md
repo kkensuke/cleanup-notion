@@ -2,7 +2,7 @@
 
 ## What it does:
 `cleanup-notion.sh` does the following:
-- Removes UUID (Universally Unique Identifier), or space+32-digit alphanumeric characters, from filenames and directory names and their references in `*.md` and `*.csv` contents.
+- Removes UUID (Universally Unique Identifier), i.e., space + 32-digit alphanumeric characters, from filenames and directory names and their references in `*.md` and `*.csv` contents.
 - make `failed.txt` which contains the list of files and directories that failed to be renamed.
 - (Need to uncomment `replace_space`) Replace `%20` with `_` in filenames and directory names and their references in `*.md` and `*.csv` contents. However, it may break URLs with `%20` and other strings with `%20`. So, first, run the script without `replace_space`, then check with `find . -exec grep "%20" {} +`. If there is no `%20` except in the file or directory path, uncomment `replace_space` and run the script.
 
