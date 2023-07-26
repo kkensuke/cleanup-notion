@@ -42,5 +42,5 @@
 
 - Then, run the script:
 	```bash
-	./cleanup-notion.sh
+	sh cleanup-notion.sh
 	```
