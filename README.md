@@ -32,7 +32,7 @@
 	brew install rename
 	```
 
-- To execute the script, put the unzipped notion backup as follows;
+- Put the unzipped notion backup as follows;
 	```bash
 	cleanup-notion
 		|
