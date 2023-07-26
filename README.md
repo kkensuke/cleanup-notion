@@ -18,7 +18,7 @@
 
 
 ## Note:
-- Since the script is supposed to run on MacOS, you may need to modify something if you gonna run on a different OS.
+- Since the script is supposed to be run on MacOS, you may need to modify something if you gonna run on a different OS.
 
 
 ## Caution:
