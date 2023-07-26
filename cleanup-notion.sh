@@ -49,12 +49,6 @@ main() {
 
 
 
-others() {
-	echo ""
-}
-
-
-
 echo "\033[0;33m"
 echo "====================================================================================="
 echo "\nCaution: Please make a copy of your Exported directory before executing this script just in case!"
@@ -67,7 +61,7 @@ echo "\nI recommend that you rename those files before exporting from notion.\n"
 
 read -r -p "Are you ready? [y/N] " response
 case "$response" in
-    [yY][eE][sS]|[yY]) main && others ;;
+    [yY][eE][sS]|[yY]) main ;;
                     *) echo "\033[0;41m"; echo "Stop!" ;;
 esac
 
