@@ -23,7 +23,7 @@
 
 ## Caution:
 - Please make a copy of your Exported directory before executing this just in case!
-- You might have files or directories with the same name in the same directory, in that case, their links in .md files won't work after executing the script. I recommend that you rename those files before exporting.
+- You might have files or directories with the same name except UUID in the same directory, in that case, their links in `.md` files won't work after executing the script. I recommend that you rename those files before exporting from notion.
 
 
 ## Usage
