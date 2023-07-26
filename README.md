@@ -12,7 +12,6 @@
 		rename_root
 		remove_UUID
 		# replace_space
-		others
 		notice
 	}
 	```
