@@ -8,7 +8,6 @@
 
 	```bash
 	main() {
-		echo "\033[0;36m"
 		rename_root
 		remove_UUID
 		# replace_space

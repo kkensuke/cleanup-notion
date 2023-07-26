@@ -37,6 +37,7 @@ replace_space(){
 	echo "\n\n================================================="
 	echo 'replace space in filenames with _'
 	find . -depth -exec rename 's| |_|g' {} + 2>/dev/null
+
 	echo "\n\n================================================="
 	echo 'replace %20 in filenames with _ in file contents'
 	find . -name "*.md" -exec sed -E -i "" '/\(.*\.md\)/s/%20/_/g' {} +
@@ -55,7 +56,6 @@ notice(){
 
 
 main() {
-	echo "\033[0;36m"
 	rename_root
 	remove_UUID
 # 	replace_space
@@ -77,7 +77,7 @@ caution(){
 ready(){
 	read -r -p "Are you ready? [y/N] " response
 	case "$response" in
-	    [yY][eE][sS]|[yY]) $1 ;;
+	    [yY][eE][sS]|[yY]) echo "\033[0;36m"; $1          ;;
 	                    *) echo "\033[0;41m"; echo "Stop" ;;
 	esac
 }
