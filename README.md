@@ -4,7 +4,7 @@
 `cleanup-notion.sh` does the following:
 - Removes UUID (Universally Unique Identifier), or space+32-digit alphanumeric characters, from filenames and directory names and their references in `*.md` and `*.csv` contents.
 - make `failed.txt` which contains the list of files and directories that failed to be renamed.
-- Replace `%20` with `_` in filenames and directory names and their references in `*.md` and `*.csv` contents. However, it may break URLs with `%20` and other strings with `%20`. So, check with `find . -name "*.md" -exec grep "%20" {} + ` and `find . -name "*.csv" -exec grep "%20" {} + `. If there is no `%20` except in the file or directory path, uncomment the following part and run the script again.
+- Replace `%20` with `_` in filenames and directory names and their references in `*.md` and `*.csv` contents. However, it may break URLs with `%20` and other strings with `%20`. So, at first, check with `find . -name "*.md" -exec grep "%20" {} +` and `find . -name "*.csv" -exec grep "%20" {} +`. If there is no `%20` except in the file or directory path, uncomment the following part and run the script.
 
 	```bash
 	# 	echo "\n\n================================================="
@@ -32,7 +32,7 @@
 	brew install rename
 	```
 
-- To execute the script, put the unzipped backup as follows;
+- To execute the script, put the unzipped notion backup as follows;
 	```bash
 	cleanup-notion
 		|
