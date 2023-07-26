@@ -37,11 +37,12 @@ replace_space(){
 	echo "\n\n================================================="
 	echo 'replace space in filenames with _'
 	find . -depth -exec rename 's| |_|g' {} + 2>/dev/null
-
 	echo "\n\n================================================="
 	echo 'replace %20 in filenames with _ in file contents'
-	find . -name "*.md" -exec sed -E -i "" 's|%20|_|g' {} +
-	find . -name "*.csv" -exec sed -E -i "" 's|%20|_|g' {} +
+	find . -name "*.md" -exec sed -E -i "" '/\[.*\.md\)/s/%20/_/g' {} +
+	find . -name "*.md" -exec sed -E -i "" '/\[.*\.csv\)/s/%20/_/g' {} +
+	find . -name "*.csv" -exec sed -E -i "" '/\[.*\.md\)/s/%20/_/g' {} +
+	find . -name "*.csv" -exec sed -E -i "" '/\[.*\.csv\)/s/%20/_/g' {} +
 }
 
 
