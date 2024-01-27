@@ -8,7 +8,6 @@
 
 	```bash
 	main() {
-		rename_root
 		remove_UUID
 		# replace_space
 		notice

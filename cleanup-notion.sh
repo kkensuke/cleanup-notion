@@ -6,14 +6,7 @@ set -u
 
 
 
-rename_root(){
-	for item in $(ls)
-	do
-		if [[ $item =~ Export-.* ]]; then
-			mv Export-*/ Export/
-		fi
-	done
-}
+cd Export-*/
 
 
 remove_UUID(){
@@ -42,6 +35,8 @@ replace_space(){
 	echo 'replace %20 in filenames with _ in file contents'
 	find . -name "*.md" -exec sed -E -i "" '/\(.*\.md\)/s/%20/_/g' {} +
 	find . -name "*.md" -exec sed -E -i "" '/\(.*\.csv\)/s/%20/_/g' {} +
+	find . -name "*.md" -exec sed -E -i "" '/\(.*\.png\)/s/%20/_/g' {} +
+	find . -name "*.md" -exec sed -E -i "" '/\(.*\.jpg\)/s/%20/_/g' {} +
 	find . -name "*.csv" -exec sed -E -i "" '/\(.*\.md\)/s/%20/_/g' {} +
 	find . -name "*.csv" -exec sed -E -i "" '/\(.*\.csv\)/s/%20/_/g' {} +
 }
@@ -56,7 +51,6 @@ notice(){
 
 
 main() {
-	rename_root
 	remove_UUID
 # 	replace_space
 	notice
